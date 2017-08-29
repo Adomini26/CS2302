@@ -1,2 +1,4 @@
 # CS2302
-Kennesaw State Class
+Java programs compiled in CS2302 at Kennesaw State University. 
+
+
