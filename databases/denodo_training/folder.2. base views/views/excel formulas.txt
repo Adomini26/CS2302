@@ -1,0 +1,34 @@
+=IF(COUNTIFS(Sheet2!A:A,Company!A2)>0,1,0)  - is matching data contained in a range
+
+=IFERROR(LEFT(A2,FIND("/",A2)-1),A2) - cleaning URLs.  removing data right of the /
+
+
+=INDEX($A:$A,RANDBETWEEN(1,COUNTA($A:$A)),1)  - selecting random cell
+
+=INDEX ( Column I want a return value from , MATCH ( My Lookup Value , Column I want to Lookup against , Enter 0 ))  Index Match formula
+
+=IF(O2>N2,O2,N2)  combining to columns with largest data
+
+=RIGHT(email,LEN(email)-FIND("@",email))  remove domain from Email. 
+
+
+# This is to search all words that are contained in column D2.  Every word has to be in quotation marks
+=IF(OR(ISNUMBER(SEARCH({"Development","IT ","Information","Technology","Marketing","Communications","Event"},D2))),1, "")
+
+# This is to get the email domain from the email address
+=MID(A1,SEARCH("@",A1)+1,255)
+
+# Get the Last name from a column with first and last name showing
+=MID(D2,FIND(" ",D2)+1,256)
+
+#Get the First name from a column with first and last name showing
+=LEFT(D2,FIND(" ",D2&" ")-1)
+
+#Takes a domain and removes all the / symbols  it gets the root domain so you can use the domains to match on with vlookups
+=IFERROR(LEFT(A2,FIND("/",A2)-1),A2)
+
+AND FINALLY..
+
+Manual Email suppressions and title suppressions via excel:
+
+=if(countif(range,cell you want to match in)>0,1,0)     -- I put a 1 to show as a match, since it is easy to sum up the ones and see how many matches there are.  You can change the 1 and 0 values to True and False if you wish. 
