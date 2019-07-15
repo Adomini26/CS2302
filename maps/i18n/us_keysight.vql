@@ -1,0 +1,13 @@
+﻿CREATE OR REPLACE MAP i18n us_keysight (
+    'country' = 'US'
+    'datepattern' = 'MM/dd/yyyy HH:mm:ss'
+    'datesubtypepattern' = 'MM/dd/yyyy'
+    'doubledecimalposition' = '2'
+    'doubledecimalseparator' = ''
+    'doublegroupseparator' = ''
+    'language' = 'en'
+    'timepattern' = 'HH:mm:ss'
+    'timesubtypepattern' = 'HH:mm:ss'
+    'timezone' = 'MST'
+);
+
